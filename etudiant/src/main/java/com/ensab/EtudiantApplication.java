@@ -18,7 +18,7 @@ public class EtudiantApplication {
 	public static void main(String[] args) {
 		ApplicationContext context= SpringApplication.run(EtudiantApplication.class, args);
 		EtudiantDao dao= context.getBean(EtudiantDao.class);
-		dao.save(new Etudiant("EnsaB", "ensab@uhp.ac.ma"));
+		dao.save(new Etudiant("SABER", "ensab@uhp.ac.ma"));
 		dao.save(new Etudiant("Ensa", "ensa@ac.ma"));
 		List<Etudiant> lst= dao.findAll();
 		for (Etudiant e: lst)
