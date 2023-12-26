@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" th:href="@{static/Style.css}"/>
+
+</head> <body>
+<FORM action = "SEtudiant" method ="post">
+<TABLE >
+<TR> <TD> <b>NomPrenom</b> </TD>
+<TD> <input type="text" name="nomPr" style="width:300px">
+</TD> </TR>
+<TR> <TD> <b>Email </b> </TD>
+<TD> <input type="text" name="email" style="width:300px">
+</TD> </TR>
+<TR> <TD colspan =2 align=center >
+<INPUT type ="submit" name="Valider" value="valider">
+</TD></TR>
+</TABLE>
+</FORM>
+<FORM action = "REtudiant" method ="post">
+<TABLE >
+<TR> <TD> <b>Email</b> </TD>
+<TD> <input type="text" name="email" style="width:300px">
+</TD> </TR>
+<TR> <TD colspan =2 align=center >
+<INPUT type="submit" name="rechercher" value="Rechercher">
+</TD> </TR>
+</TABLE> </FORM> <br>
+<TABLE >
+<TR> <TH >Id</TH> <TH >NomPrenom</TH> <TH >Email</TH> </TR>
+<tr th:each ="lst:${listeE}">
+<TD th:text="${lst.id}"> </TD>
+<TD th:text= "${lst.nomPrenom}" > </TD>
+<TD th:text="${lst.email}"> </TD>
+</TR>
+</TABLE>
+</body> 
+</html>
